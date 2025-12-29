@@ -35,6 +35,11 @@
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
+
+    /* Correction pour navigation fixe : compensation lors du scroll vers ancre */
+    section[id] {
+      scroll-margin-top: 100px; /* Ajustez à 120px si nécessaire selon la hauteur réelle de la nav */
+    }
   </style>
 </head>
 
@@ -59,7 +64,7 @@
         <li><a href="index.html#zone" class="hover:text-[var(--accent)] transition">Zone d'intervention</a></li>
         <li><a href="index.html#avis" class="hover:text-[var(--accent)] transition">Avis</a></li>
         <li><a href="faq.html" class="hover:text-[var(--accent)] transition">FAQ</a></li>
-        <li><a href="index.html#rdv" class="bg-white text-[var(--primary)] px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition">📅Prendre RDV maintenant</a></li>
+        <li><a href="index.html#rdv" class="bg-white text-[var(--primary)] px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition">📅 Prendre RDV maintenant</a></li>
       </ul>
     </div>
     <!-- Menu mobile -->
@@ -69,7 +74,7 @@
       <a href="index.html#zone" class="block py-2 hover:text-[var(--accent)]">Zone</a>
       <a href="index.html#avis" class="block py-2 hover:text-[var(--accent)]">Avis</a>
       <a href="faq.html" class="block py-2 hover:text-[var(--accent)]">FAQ</a>
-      <a href="index.html#rdv" class="block py-2 bg-white text-[var(--primary)] rounded mt-2 text-center font-bold">📅Prendre RDV maintenant</a>
+      <a href="index.html#rdv" class="block py-2 bg-white text-[var(--primary)] rounded mt-2 text-center font-bold">📅 Prendre RDV maintenant</a>
     </div>
   </div>
 </nav>
@@ -203,9 +208,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Les autres sections restent identiques (seules les couleurs principales ont été adaptées où nécessaire) -->
-  <!-- Pour brevité, je conserve le reste du code précédent avec les ajustements de couleur mineurs -->
 
  <section id="processus" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
@@ -381,7 +383,7 @@
         <div><h4 class="font-bold text-lg mb-3">Services</h4><p class="text-sm opacity-80">Ramonage tous combustibles<br>Inspection caméra<br>Débistrage & fumisterie<br>Certificat assuré</p></div>
       </div>
       <div class="border-t border-blue-400 pt-6 text-center text-sm opacity-75">
-        <p>© 2025 Ubac Ramonage | <a href="mentions-legales.html" class="hover:underline">Mentions légales</a> | <a href=rgpd.html class="hover:underline">RGPD</a></p>
+        <p>© 2025 Ubac Ramonage | <a href="mentions-legales.html" class="hover:underline">Mentions légales</a> | <a href="rgpd.html" class="hover:underline">RGPD</a></p>
       </div>
     </div>
   </footer>
@@ -437,5 +439,4 @@
   });
 </script>
 </body>
-
 </html>
