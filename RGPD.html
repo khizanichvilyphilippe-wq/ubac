@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Métadonnées de base -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titre et description SEO -->
+  <title>Politique de Protection des Données - Ubac Ramonage | Philippe Khizanichvily</title>
+  <meta name="description" content="Politique de confidentialité et protection des données personnelles du site Ubac Ramonage - Ramoneur certifié dans le Grésivaudan.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Styles personnalisés identiques au site principal -->
+  <style>
+    html { scroll-behavior: smooth; }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #2C5282 0%, #1E3A5F 100%);
+    }
+    
+    :root {
+      --primary: #2C5282;   /* Bleu principal */
+      --secondary: #0891B2; /* Cyan moyen */
+      --accent: #00D1FF;    /* Cyan vif */
+    }
+    
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+  <!-- Navigation fixe (identique au site principal) -->
+  <nav class="bg-[var(--primary)] text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="flex items-center">
+          <img src="logo-ubac-ramonage.png" alt="Ubac Ramonage - Logo" class="h-14 w-auto">
+        </a>
+        <button id="menuBtn" class="md:hidden focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <ul class="hidden md:flex space-x-6 items-center">
+          <li><a href="index.html#services" class="hover:text-[var(--accent)] transition">Services</a></li>
+          <li><a href="index.html#processus" class="hover:text-[var(--accent)] transition">Notre Méthode</a></li>
+          <li><a href="index.html#zone" class="hover:text-[var(--accent)] transition">Zone</a></li>
+          <li><a href="index.html#avis" class="hover:text-[var(--accent)] transition">Avis</a></li>
+          <li><a href="index.html#rdv" class="bg-white text-[var(--primary)] px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition">📅 RDV</a></li>
+        </ul>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2">
+        <a href="index.html#services" class="block py-2 hover:text-[var(--accent)]">Services</a>
+        <a href="index.html#processus" class="block py-2 hover:text-[var(--accent)]">Notre Méthode</a>
+        <a href="index.html#zone" class="block py-2 hover:text-[var(--accent)]">Zone</a>
+        <a href="index.html#avis" class="block py-2 hover:text-[var(--accent)]">Avis</a>
+        <a href="index.html#rdv" class="block py-2 bg-white text-[var(--primary)] rounded mt-2 text-center font-bold">📅 RDV</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main class="py-16">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[var(--primary)]">Politique de Protection des Données Personnelles</h1>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 space-y-10">
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">1. Responsable du traitement</h2>
+          <p class="leading-relaxed text-gray-700">
+            Philippe Khizanichvily<br>
+            Ubac Ramonage<br>
+            Plateau des Petites Roches<br>
+            38660 Saint-Hilaire-du-Touvet (ou commune exacte)<br>
+            Téléphone : <a href="tel:0767640155" class="text-[var(--secondary)] hover:underline">07 67 64 01 55</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">2. Données collectées sur ce site</h2>
+          <p class="leading-relaxed text-gray-700">
+            Ce site ne collecte directement aucune donnée personnelle via des formulaires ou cookies de suivi. Aucune information (nom, email, adresse IP à des fins analytiques) n’est enregistrée par Ubac Ramonage lors de votre navigation.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">3. Prise de rendez-vous via Gazoleen</h2>
+          <p class="leading-relaxed text-gray-700">
+            La réservation de rendez-vous s’effectue via un iframe intégré pointant vers la plateforme externe Gazoleen[](https://hauts-de-france-ramonage.gazoleen.com/rdv).<br><br>
+            Les données saisies (nom, téléphone, email, etc.) sont collectées et traitées directement par Gazoleen, qui agit en tant que responsable de traitement indépendant.<br><br>
+            Pour plus d’informations sur l’utilisation de vos données par Gazoleen, veuillez consulter leur propre politique de confidentialité disponible sur leur plateforme.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">4. Vos droits</h2>
+          <p class="leading-relaxed text-gray-700">
+            Conformément au RGPD, vous disposez des droits suivants :<br>
+            - Droit d’accès, de rectification, d’effacement et d’opposition.<br>
+            - Droit à la portabilité des données et à la limitation du traitement.<br><br>
+            Pour toute demande relative aux données traitées via Gazoleen, contactez directement leur service.<br>
+            Pour toute question générale sur ce site, contactez Philippe Khizanichvily aux coordonnées ci-dessus.<br><br>
+            Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr).
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">5. Cookies et traceurs</h2>
+          <p class="leading-relaxed text-gray-700">
+            Ce site n’utilise pas de cookies à des fins publicitaires ou analytiques. Seuls des cookies techniques strictement nécessaires au fonctionnement (le cas échéant via l’iframe Gazoleen) peuvent être déposés.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer simplifié -->
+  <footer class="bg-[var(--primary)] text-white py-8 mt-16">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm opacity-75">
+        © 2025 Ubac Ramonage | 
+        <a href="mentions-legales.html" class="hover:underline">Mentions légales</a> | 
+        <a href="rgpd.html" class="hover:underline">Protection des données</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script menu mobile -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+  </script>
+</body>
+</html>

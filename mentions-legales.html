@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Métadonnées de base -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titre et description SEO -->
+  <title>Mentions Légales - Ubac Ramonage | Philippe Khizanichvily</title>
+  <meta name="description" content="Mentions légales du site Ubac Ramonage - Ramoneur fumiste certifié COSTIC dans le Grésivaudan.">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Styles personnalisés identiques au site principal -->
+  <style>
+    html { scroll-behavior: smooth; }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #2C5282 0%, #1E3A5F 100%);
+    }
+    
+    :root {
+      --primary: #2C5282;   /* Bleu principal */
+      --secondary: #0891B2; /* Cyan moyen */
+      --accent: #00D1FF;    /* Cyan vif */
+    }
+    
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+  <!-- Navigation fixe (identique au site principal pour cohérence) -->
+  <nav class="bg-[var(--primary)] text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="flex items-center">
+          <img src="logo-ubac-ramonage.png" alt="Ubac Ramonage - Logo" class="h-14 w-auto">
+        </a>
+        <button id="menuBtn" class="md:hidden focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <ul class="hidden md:flex space-x-6 items-center">
+          <li><a href="index.html#services" class="hover:text-[var(--accent)] transition">Services</a></li>
+          <li><a href="index.html#processus" class="hover:text-[var(--accent)] transition">Notre Méthode</a></li>
+          <li><a href="index.html#zone" class="hover:text-[var(--accent)] transition">Zone</a></li>
+          <li><a href="index.html#avis" class="hover:text-[var(--accent)] transition">Avis</a></li>
+          <li><a href="index.html#rdv" class="bg-white text-[var(--primary)] px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition">📅 RDV</a></li>
+        </ul>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2">
+        <a href="index.html#services" class="block py-2 hover:text-[var(--accent)]">Services</a>
+        <a href="index.html#processus" class="block py-2 hover:text-[var(--accent)]">Notre Méthode</a>
+        <a href="index.html#zone" class="block py-2 hover:text-[var(--accent)]">Zone</a>
+        <a href="index.html#avis" class="block py-2 hover:text-[var(--accent)]">Avis</a>
+        <a href="index.html#rdv" class="block py-2 bg-white text-[var(--primary)] rounded mt-2 text-center font-bold">📅 RDV</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <main class="py-16">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 text-[var(--primary)]">Mentions Légales</h1>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 space-y-10">
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">1. Éditeur du site</h2>
+          <p class="leading-relaxed text-gray-700">
+            Le présent site est édité par :<br>
+            <strong>Philippe Khizanichvily</strong><br>
+            Artisan ramoneur fumiste<br>
+            Ubac Ramonage<br>
+            Plateau des Petites Roches<br>
+            38660 Saint-Hilaire-du-Touvet (ou commune exacte)<br>
+            Téléphone : <a href="tel:0767640155" class="text-[var(--secondary)] hover:underline">07 67 64 01 55</a>
+          </p>
+          <p class="mt-4 text-gray-600">
+            SIRET : [À compléter dès réception du KBIS]<br>
+            Numéro d’inscription au Répertoire des Métiers : [À compléter]<br>
+            Assurance professionnelle : [Nom de l’assureur + numéro de police – à compléter]
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">2. Directeur de la publication</h2>
+          <p class="leading-relaxed text-gray-700">
+            Philippe Khizanichvily<br>
+            Contact : <a href="tel:0767640155" class="text-[var(--secondary)] hover:underline">07 67 64 01 55</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">3. Hébergement</h2>
+          <p class="leading-relaxed text-gray-700">
+            Ce site est hébergé par :<br>
+            [Nom de votre hébergeur, ex. OVH SAS]<br>
+            2 rue Kellermann<br>
+            59100 Roubaix - France<br>
+            Site web : <a href="https://www.ovh.com" target="_blank" rel="noopener" class="text-[var(--secondary)] hover:underline">www.ovh.com</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">4. Propriété intellectuelle</h2>
+          <p class="leading-relaxed text-gray-700">
+            L’ensemble du contenu du site (textes, images, logos, graphismes) est la propriété exclusive de Philippe Khizanichvily ou de ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">5. Données personnelles</h2>
+          <p class="leading-relaxed text-gray-700">
+            Les données collectées via le formulaire de contact sont utilisées exclusivement pour répondre à vos demandes de devis ou de rendez-vous. Elles ne sont ni vendues ni transmises à des tiers. Conformément à la loi « Informatique et Libertés » du 6 janvier 1978 modifiée et au RGPD, vous disposez d’un droit d’accès, de rectification et de suppression de vos données. Pour l’exercer, contactez Philippe Khizanichvily aux coordonnées indiquées ci-dessus.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-4 text-[var(--secondary)]">6. Cookies</h2>
+          <p class="leading-relaxed text-gray-700">
+            Le site n’utilise pas de cookies de suivi ou publicitaires. Seuls des cookies techniques nécessaires au fonctionnement peuvent être déposés.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer simplifié -->
+  <footer class="bg-[var(--primary)] text-white py-8 mt-16">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm opacity-75">
+        © 2025 Ubac Ramonage | 
+        <a href="mentions-legales.html" class="hover:underline">Mentions légales</a> | 
+        <a href="#" class="hover:underline">RGPD</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script menu mobile (identique au site principal) -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+  </script>
+</body>
+</html>
