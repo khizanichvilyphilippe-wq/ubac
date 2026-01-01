@@ -4,52 +4,51 @@
   <!-- Métadonnées de base -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+ 
   <!-- Titre de la page (affiché dans l'onglet du navigateur et dans les résultats Google) -->
   <title>Ubac Ramonage - Ramoneur Certifié COSTIC | Grésivaudan & Petites Roches</title>
-  
+ 
   <!-- Description pour le référencement SEO -->
   <meta name="description" content="Philippe Khizanichvily, ramoneur fumiste certifié COSTIC. Ramonage tous combustibles, inspection caméra, débistrage. Intervention rapide dans le Grésivaudan. Certificat assuré.">
-  
+ 
   <!-- Chargement de Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+ 
   <!-- Styles personnalisés -->
   <style>
-    html { scroll-behavior: smooth; }
-    
-    /* Gradient hero adapté aux couleurs du logo (bleu profond) */
-    .hero-gradient { 
-      background: linear-gradient(135deg, #2C5282 0%, #1E3A5F 100%); 
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-bottom: 160px; /* Compensation boutons flottants en bas */
     }
-    
+   
+    /* Gradient hero adapté aux couleurs du logo (bleu profond) */
+    .hero-gradient {
+      background: linear-gradient(135deg, #2C5282 0%, #1E3A5F 100%);
+    }
+   
     /* Couleurs personnalisées issues du logo */
     :root {
-      --primary: #2C5282;     /* Bleu principal (fond nav, accents) */
-      --secondary: #0891B2;   /* Cyan moyen (boutons, accents) */
-      --accent: #00D1FF;      /* Cyan vif (détails, hover) */
+      --primary: #2C5282; /* Bleu principal (fond nav, accents) */
+      --secondary: #0891B2; /* Cyan moyen (boutons, accents) */
+      --accent: #00D1FF; /* Cyan vif (détails, hover) */
     }
-    
+   
     /* Focus visible amélioré pour accessibilité */
     a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
-
     /* Correction pour navigation fixe : compensation lors du scroll vers ancre */
     section[id] {
       scroll-margin-top: 100px; /* Ajustez à 120px si nécessaire selon la hauteur réelle de la nav */
     }
-
     /* Correction safe-area pour boutons flottants (Android + iOS) */
     .floating-btn-bottom {
       bottom: calc(env(safe-area-inset-bottom) + 1.25rem) !important; /* Bouton RDV (le plus bas) */
     }
-
     .floating-btn-upper {
       bottom: calc(env(safe-area-inset-bottom) + 6.5rem) !important; /* Bouton Appel (au-dessus) */
     }
-
     /* Fallback si env() non supporté (très rare) */
     @supports not (bottom: env(safe-area-inset-bottom)) {
       .floating-btn-bottom { bottom: 1.25rem !important; }
@@ -57,9 +56,7 @@
     }
   </style>
 </head>
-
 <body class="font-sans text-gray-800">
-
  <!-- Navigation fixe (identique au site principal) -->
 <nav class="bg-[var(--primary)] text-white sticky top-0 z-50 shadow-lg">
   <div class="container mx-auto px-4 py-3">
@@ -93,38 +90,37 @@
     </div>
   </div>
 </nav>
-
  <!-- Header principal mis à jour -->
 <header id="accueil" class="hero-gradient text-white py-16 md:py-24 lg:py-32">
   <div class="container mx-auto px-6">
     <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-      
+     
       <!-- Logo à gauche (grand format) -->
       <div class="flex justify-center lg:justify-start w-full lg:w-auto">
-        <img 
-          src="logo-ubac-ramonage.png" 
-          alt="Ubac Ramonage - Logo" 
+        <img
+          src="logo-ubac-ramonage.png"
+          alt="Ubac Ramonage - Logo"
           class="h-96 md:h-[28rem] lg:h-[36rem] xl:h-[42rem] w-auto object-contain drop-shadow-2xl"
         >
       </div>
-      
+     
       <!-- Contenu texte et boutons à droite -->
       <div class="text-center lg:text-left max-w-3xl">
         <!-- Titre principal impactant -->
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
           Ramonage Professionnel<br>dans le Grésivaudan
         </h1>
-        
+       
         <!-- Sous-titre orienté sécurité et professionnalisme -->
         <p class="text-2xl md:text-3xl mb-6 opacity-95 font-semibold">
           Le ramonage : une affaire de sécurité
         </p>
-        
+       
         <!-- Description concise et orientée bénéfices client -->
         <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto lg:mx-0 opacity-85 leading-relaxed">
           Intervention rapide • Inspection caméra • Conduits propres pour une sécurité maximale et une performance optimale de votre chauffage
         </p>
-        
+       
         <!-- Boutons d'appel à l'action -->
         <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
           <a href="#rdv" class="bg-white text-[var(--primary)] px-10 py-5 rounded-lg text-xl font-bold hover:bg-gray-100 transition shadow-2xl w-full sm:w-auto">
@@ -138,7 +134,6 @@
     </div>
   </div>
 </header>
-
   <!-- Présentation -->
  <section class="py-16 bg-gray-50">
   <div class="container mx-auto px-6">
@@ -149,7 +144,7 @@
         <p class="text-lg leading-relaxed mb-4">Je suis <strong>Philippe Khizanichvily</strong>, artisan ramoneur fumiste diplômé COSTIC. Installé au Plateau des Petites Roches (38660), j'interviens dans tout le Grésivaudan pour vous garantir <strong>la sécurité et la performance</strong> de vos installations de chauffage.</p>
         <p class="text-lg leading-relaxed mb-4">Ubac Ramonage <strong>diagnostique et entretient vos conduits</strong> de cheminées, vous <strong>conseille</strong> pour que votre <strong>chauffage fonctionne le mieux possible</strong>, qu'il <strong>respecte l'environnement</strong>, le tout en toute <strong>sécurité</strong>.</p>
       </div>
-      
+     
       <!-- Image hero sur la droite (desktop) -->
       <div class="w-full md:w-1/2 order-1 md:order-2">
         <img src="hero.png" alt="Philippe Khizanichvily, ramoneur certifié au Plateau des Petites Roches" class="w-full h-full object-cover rounded-xl shadow-lg">
@@ -157,13 +152,12 @@
     </div>
   </div>
 </section>
-
   <!-- Services principaux -->
   <section id="services" class="py-16">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--primary)]">Nos Services</h2>
       <p class="text-center text-lg text-gray-600 mb-12">Cliquez sur un service pour prendre rendez-vous</p>
-     
+    
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         <a href="#rdv" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition border-t-4 border-[var(--primary)] transform hover:scale-105">
           <div class="text-4xl mb-4">🔥</div>
@@ -208,7 +202,6 @@
           <p class="text-sm text-[var(--secondary)] font-semibold mt-3">→ Réserver</p>
         </a>
       </div>
-
       <!-- Services professionnels -->
       <div class="bg-[var(--secondary)] text-white p-8 rounded-xl shadow-lg">
         <h3 class="text-2xl font-bold mb-4">Services Professionnels</h3>
@@ -223,7 +216,6 @@
       </div>
     </div>
   </section>
-
  <section id="processus" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--primary)]">Notre Méthode</h2>
@@ -247,7 +239,6 @@
       </div>
     </div>
   </section>
-
   <section class="py-16">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--primary)]">Pourquoi Ubac Ramonage ?</h2>
@@ -270,7 +261,6 @@
       </div>
     </div>
   </section>
-
   <section class="py-16 bg-[var(--primary)] text-white">
     <div class="container mx-auto px-6">
       <div class="max-w-4xl mx-auto">
@@ -292,7 +282,6 @@
       </div>
     </div>
   </section>
-
   <section id="zone" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-[var(--primary)]">Zone d'Intervention</h2>
@@ -316,13 +305,18 @@
     </div>
   </section>
 
- <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden relative h-[800px] md:h-[1000px] lg:h-[1200px]">
-  <iframe src="https://hauts-de-france-ramonage.gazoleen.com/rdv"
-          class="absolute inset-0 w-full h-full border-0"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+  <!-- Section Réservation Gazoleen (corrigée avec id="rdv") -->
+  <section id="rdv" class="py-16 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] text-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Réservation en Ligne 24/7</h2>
+      <p class="text-center text-xl mb-8 opacity-90">Via plateforme Gazoleen sécurisée</p>
+      <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden relative h-[800px] md:h-[1000px] lg:h-[1200px]">
+        <iframe src="https://hauts-de-france-ramonage.gazoleen.com/rdv" <!-- REMPLACEZ PAR VOTRE URL GAZOLEEN PERSONNELLE -->
+                class="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
       <p class="text-center mt-6 text-sm opacity-75">Paiement sécurisé • Confirmation email/SMS • Certificat sur place</p>
     </div>
   </section>
@@ -344,7 +338,6 @@
       </div>
     </div>
   </section>
-
   <section id="contact" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--primary)]">Contact</h2>
@@ -385,7 +378,6 @@
       </div>
     </div>
   </section>
-
   <footer class="bg-[var(--primary)] text-white py-8">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-8 mb-6">
@@ -398,22 +390,18 @@
       </div>
     </div>
   </footer>
-
   <!-- Bouton flottant RDV -->
   <a href="#rdv" class="fixed bottom-20 right-6 floating-btn-bottom bg-[var(--secondary)] text-white p-4 rounded-full shadow-2xl hover:bg-[#07a1c9] transition z-50 flex items-center justify-center w-16 h-16 text-2xl">📅</a>
-
   <!-- Bouton flottant Appel -->
   <a href="tel:0767640155" class="fixed bottom-40 right-6 floating-btn-upper bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition z-50 flex items-center justify-center w-16 h-16 text-2xl">
     📞
   </a>
-
   <!-- Script menu mobile -->
 <script>
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  
+ 
   let timeoutId = null; // Variable pour stocker le timer
-
   // Fonction pour ouvrir le menu
   function openMenu() {
     mobileMenu.classList.remove('hidden');
@@ -421,14 +409,12 @@
     clearTimeout(timeoutId); // Annule un timer précédent s'il existe
     timeoutId = setTimeout(closeMenu, 5000);
   }
-
   // Fonction pour fermer le menu
   function closeMenu() {
     mobileMenu.classList.add('hidden');
     clearTimeout(timeoutId); // Annule le timer
     timeoutId = null;
   }
-
   // Toggle au clic sur le bouton hamburger
   menuBtn.addEventListener('click', () => {
     if (mobileMenu.classList.contains('hidden')) {
@@ -437,23 +423,19 @@
       closeMenu();
     }
   });
-
   // Fermeture immédiate au clic sur un lien du menu
   document.querySelectorAll('#mobileMenu a').forEach(link => {
     link.addEventListener('click', () => {
       closeMenu();
     });
   });
-
   // Optionnel : réinitialiser le timer si la souris survole le menu (améliore l'expérience)
   mobileMenu.addEventListener('mouseenter', () => {
     clearTimeout(timeoutId);
   });
-
   mobileMenu.addEventListener('mouseleave', () => {
     timeoutId = setTimeout(closeMenu, 5000);
   });
 </script>
 </body>
 </html>
-
