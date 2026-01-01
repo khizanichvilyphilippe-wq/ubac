@@ -5,43 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Titre et SEO -->
+  <!-- Titre de la page (affiché dans l'onglet du navigateur et dans les résultats Google) -->
   <title>Ubac Ramonage - Ramoneur Certifié COSTIC | Grésivaudan & Petites Roches</title>
+  
+  <!-- Description pour le référencement SEO -->
   <meta name="description" content="Philippe Khizanichvily, ramoneur fumiste certifié COSTIC. Ramonage tous combustibles, inspection caméra, débistrage. Intervention rapide dans le Grésivaudan. Certificat assuré.">
   
-  <!-- Tailwind CSS via CDN -->
+  <!-- Chargement de Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Styles personnalisés -->
   <style>
     html { scroll-behavior: smooth; }
     
+    /* Gradient hero adapté aux couleurs du logo (bleu profond) */
     .hero-gradient { 
       background: linear-gradient(135deg, #2C5282 0%, #1E3A5F 100%); 
     }
     
+    /* Couleurs personnalisées issues du logo */
     :root {
-      --primary: #2C5282;
-      --secondary: #0891B2;
-      --accent: #00D1FF;
+      --primary: #2C5282;     /* Bleu principal (fond nav, accents) */
+      --secondary: #0891B2;   /* Cyan moyen (boutons, accents) */
+      --accent: #00D1FF;      /* Cyan vif (détails, hover) */
+    }
+    
+    /* Focus visible amélioré pour accessibilité */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
     }
 
+    /* Correction pour navigation fixe : compensation lors du scroll vers ancre */
     section[id] {
-      scroll-margin-top: 100px;
+      scroll-margin-top: 100px; /* Ajustez à 120px si nécessaire selon la hauteur réelle de la nav */
     }
 
-    /* Améliorations spécifiques mobile */
-    @media (max-width: 640px) {
-      .mobile-btn {
-        padding: 1.25rem 1.5rem !important;
-        font-size: 1.125rem !important;
+    /* Correction position boutons flottants pour Android et iOS (safe area) */
+    a[href="#rdv"] {
+      bottom: calc(env(safe-area-inset-bottom) + 1.5rem) !important; /* Bouton RDV (📅) - le plus bas */
+      right: 1.5rem !important;
+      width: 4rem !important;
+      height: 4rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    a[href="tel:0767640155"] {
+      bottom: calc(env(safe-area-inset-bottom) + 6.75rem) !important; /* Bouton Appel (📞) - au-dessus */
+      right: 1.5rem !important;
+      width: 4rem !important;
+      height: 4rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    /* Fallback pour les navigateurs qui ne supportent pas env() (très rare) */
+    @supports not (bottom: env(safe-area-inset-bottom)) {
+      a[href="#rdv"] {
+        bottom: 1.5rem !important;
       }
-      .hero-logo {
-        height: 20rem !important;
-      }
-      .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+      a[href="tel:0767640155"] {
+        bottom: 6.75rem !important;
       }
     }
   </style>
@@ -49,75 +76,39 @@
 
 <body class="font-sans text-gray-800">
 
- <!-- Navigation fixe -->
+ <!-- Navigation fixe (identique au site principal) -->
 <nav class="bg-[var(--primary)] text-white sticky top-0 z-50 shadow-lg">
   <div class="container mx-auto px-4 py-3">
     <div class="flex justify-between items-center">
       <a href="index.html" class="flex items-center">
         <img src="logo-ubac-ramonage.png" alt="Ubac Ramonage - Logo" class="h-14 w-auto">
       </a>
-      <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Ouvrir le menu">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
       <!-- Menu desktop -->
       <ul class="hidden md:flex space-x-6 items-center">
-        <li><a href="#services" class="hover:text-[var(--accent)] transition">Services</a></li>
-        <li><a href="#processus" class="hover:text-[var(--accent)] transition">Notre Méthode</a></li>
-        <li><a href="#zone" class="hover:text-[var(--accent)] transition">Zone d'Intervention</a></li>
-        <li><a href="#avis" class="hover:text-[var(--accent)] transition">Avis Clients</a></li>
+        <li><a href="index.html#services" class="hover:text-[var(--accent)] transition">Services</a></li>
+        <li><a href="index.html#processus" class="hover:text-[var(--accent)] transition">Notre Méthode</a></li>
+        <li><a href="index.html#zone" class="hover:text-[var(--accent)] transition">Zone d'Intervention</a></li>
+        <li><a href="index.html#avis" class="hover:text-[var(--accent)] transition">Avis Clients</a></li>
         <li><a href="faq.html" class="hover:text-[var(--accent)] transition">FAQ</a></li>
-        <li><a href="#rdv" class="bg-white text-[var(--primary)] px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Prendre RDV</a></li>
+        <li><a href="index.html#rdv" class="bg-white text-[var(--primary)] px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition">📅 Prendre RDV Maintenant</a></li>
       </ul>
     </div>
     <!-- Menu mobile -->
-    <div id="mobileMenu" class="hidden md:hidden pt-6 pb-4 space-y-4">
-      <a href="#services" class="block py-3 hover:text-[var(--accent)] text-lg">Services</a>
-      <a href="#processus" class="block py-3 hover:text-[var(--accent)] text-lg">Notre Méthode</a>
-      <a href="#zone" class="block py-3 hover:text-[var(--accent)] text-lg">Zone d'Intervention</a>
-      <a href="#avis" class="block py-3 hover:text-[var(--accent)] text-lg">Avis Clients</a>
-      <a href="faq.html" class="block py-3 hover:text-[var(--accent)] text-lg">FAQ</a>
-      <a href="#rdv" class="block bg-white text-[var(--primary)] rounded-lg py-4 text-center font-bold text-lg">Prendre RDV Maintenant</a>
+    <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2">
+      <a href="index.html#services" class="block py-2 hover:text-[var(--accent)]">Services</a>
+      <a href="index.html#processus" class="block py-2 hover:text-[var(--accent)]">Notre Méthode</a>
+      <a href="index.html#zone" class="block py-2 hover:text-[var(--accent)]">Zone d'Intervention</a>
+      <a href="index.html#avis" class="block py-2 hover:text-[var(--accent)]">Avis Clients</a>
+      <a href="faq.html" class="block py-2 hover:text-[var(--accent)]">FAQ</a>
+      <a href="index.html#rdv" class="block py-2 bg-white text-[var(--primary)] rounded mt-2 text-center font-bold">📅 Prendre RDV Maintenant</a>
     </div>
   </div>
 </nav>
-
-<!-- Script pour menu burger (fiable sur tous les mobiles) -->
-<script>
-  document.getElementById('menuBtn').addEventListener('click', function() {
-    document.getElementById('mobileMenu').classList.toggle('hidden');
-  });
-</script>
-
-<!-- Header principal -->
-<header id="accueil" class="hero-gradient text-white py-16 md:py-24 lg:py-32">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-      <div class="flex justify-center lg:justify-start w-full lg:w-auto">
-        <img src="logo-ubac-ramonage.png" alt="Ubac Ramonage - Logo" class="hero-logo h-96 md:h-[28rem] lg:h-[36rem] xl:h-[42rem] w-auto object-contain drop-shadow-2xl">
-      </div>
-      <div class="text-center lg:text-left max-w-3xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-          Ramonage Professionnel<br>dans le Grésivaudan
-        </h1>
-        <p class="text-2xl md:text-3xl mb-6 opacity-95 font-semibold">
-          Le ramonage : une affaire de sécurité
-        </p>
-        <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto lg:mx-0 opacity-85 leading-relaxed">
-          Intervention rapide • Inspection caméra • Conduits propres pour une sécurité maximale et une performance optimale de votre chauffage
-        </p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-          <a href="#rdv" class="mobile-btn bg-white text-[var(--primary)] rounded-lg text-xl font-bold hover:bg-gray-100 transition shadow-2xl text-center">
-            Prendre RDV
-          </a>
-          <a href="tel:0767640155" class="mobile-btn bg-[var(--secondary)] text-white rounded-lg text-xl font-bold hover:bg-[#07a1c9] transition shadow-2xl text-center">
-            07 67 64 01 55
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
 
  <!-- Header principal mis à jour -->
 <header id="accueil" class="hero-gradient text-white py-16 md:py-24 lg:py-32">
@@ -429,10 +420,10 @@
   </footer>
 
    <!-- Bouton flottant RDV -->
-  <a href="#rdv" class="fixed bottom-20 right-6 bg-[var(--secondary)] text-white p-4 rounded-full shadow-2xl hover:bg-[#07a1c9] transition z-50 flex items-center justify-center w-16 h-16 text-2xl">📅</a>
+  <a href="#rdv" class="fixed bg-[var(--secondary)] text-white p-4 rounded-full shadow-2xl hover:bg-[#07a1c9] transition z-50 text-2xl">📅</a>
 
   <!-- Nouveau bouton flottant Appel -->
-  <a href="tel:0767640155" class="fixed bottom-40 right-6 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition z-50 flex items-center justify-center w-16 h-16 text-2xl">
+  <a href="tel:0767640155" class="fixed bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition z-50 text-2xl">
     📞
   </a>
   
