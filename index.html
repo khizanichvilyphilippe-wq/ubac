@@ -41,35 +41,19 @@
       scroll-margin-top: 100px; /* Ajustez à 120px si nécessaire selon la hauteur réelle de la nav */
     }
 
-    /* Correction position boutons flottants pour Android et iOS (safe area) */
-    a[href="#rdv"] {
-      bottom: calc(env(safe-area-inset-bottom) + 1.5rem) !important; /* Bouton RDV (📅) - le plus bas */
-      right: 1.5rem !important;
-      width: 4rem !important;
-      height: 4rem !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
+    /* Correction safe-area pour boutons flottants (Android + iOS) */
+    .floating-btn-bottom {
+      bottom: calc(env(safe-area-inset-bottom) + 1.25rem) !important; /* Bouton RDV (le plus bas) */
     }
 
-    a[href="tel:0767640155"] {
-      bottom: calc(env(safe-area-inset-bottom) + 6.75rem) !important; /* Bouton Appel (📞) - au-dessus */
-      right: 1.5rem !important;
-      width: 4rem !important;
-      height: 4rem !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
+    .floating-btn-upper {
+      bottom: calc(env(safe-area-inset-bottom) + 6.5rem) !important; /* Bouton Appel (au-dessus) */
     }
 
-    /* Fallback pour les navigateurs qui ne supportent pas env() (très rare) */
+    /* Fallback si env() non supporté (très rare) */
     @supports not (bottom: env(safe-area-inset-bottom)) {
-      a[href="#rdv"] {
-        bottom: 1.5rem !important;
-      }
-      a[href="tel:0767640155"] {
-        bottom: 6.75rem !important;
-      }
+      .floating-btn-bottom { bottom: 1.25rem !important; }
+      .floating-btn-upper { bottom: 6.5rem !important; }
     }
   </style>
 </head>
@@ -419,14 +403,13 @@
     </div>
   </footer>
 
-   <!-- Bouton flottant RDV -->
-  <a href="#rdv" class="fixed bg-[var(--secondary)] text-white p-4 rounded-full shadow-2xl hover:bg-[#07a1c9] transition z-50 text-2xl">📅</a>
+  <!-- Bouton flottant RDV -->
+  <a href="#rdv" class="fixed bottom-20 right-6 floating-btn-bottom bg-[var(--secondary)] text-white p-4 rounded-full shadow-2xl hover:bg-[#07a1c9] transition z-50 flex items-center justify-center w-16 h-16 text-2xl">📅</a>
 
-  <!-- Nouveau bouton flottant Appel -->
-  <a href="tel:0767640155" class="fixed bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition z-50 text-2xl">
+  <!-- Bouton flottant Appel -->
+  <a href="tel:0767640155" class="fixed bottom-40 right-6 floating-btn-upper bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition z-50 flex items-center justify-center w-16 h-16 text-2xl">
     📞
   </a>
-  
 
   <!-- Script menu mobile -->
 <script>
